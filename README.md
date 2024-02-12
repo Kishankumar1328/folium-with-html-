@@ -32,8 +32,21 @@ Explain how users can use your project. Include code snippets or examples if nec
 ```python
 import folium
 
-# Your code here
-```
+map = folium.Map(location=(11.1271, 78.387451), zoom_start=8)
+
+# Yercaud
+yercaud_marker = folium.Marker(
+    location=[11.77, 78.21],
+    tooltip="Yercaud",
+    icon=folium.Icon(icon='cloud', icon_color="white", color="darkblue"),
+    popup=folium.Html(
+        "<h1>King Of Eastern Ghats</h1>"
+        "<img src='C:/Users/krss1/OneDrive/Pictures/folium pic/yercaud1.jpg'>"
+        "<p>Nestled 'midst emerald hills, Yercaud's allure unfolds,<br>"
+        "Whispers of serenity in mist-kissed tales, a tranquil haven to behold</p>",
+        script=True
+    )
+).add_to(map)
 
 ## Customization
 
